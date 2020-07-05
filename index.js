@@ -15,6 +15,15 @@ function logkey(e){
     var audio = new Audio(audio_val);
     audio.play();
 }
+for(var i = 0 ; i < numberOfDrumButtons ; i++)
+{
+    document.querySelectorAll(".drum")[i].addEventListener("click",function(){
+        let val = this.innerText;
+        let audio_url = "sounds/"+maps[val];
+        var audio_ = new Audio(audio_url);
+        audio_.play();
+    })
+}
 
 
 
